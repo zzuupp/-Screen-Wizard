@@ -1,0 +1,12 @@
+# 자동으로 운영체제에 맞게 변환
+* text=auto
+
+# Windows에서도 LF 유지 (주로 코드 파일)
+*.sh text eol=lf
+*.js text eol=lf
+*.py text eol=lf
+*.java text eol=lf
+
+# Windows용 파일은 CRLF 유지 (예: 배치 파일)
+*.bat text eol=crlf
+*.cmd text eol=crlf

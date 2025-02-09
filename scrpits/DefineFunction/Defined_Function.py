@@ -1,6 +1,23 @@
+# 데이터 관련
 import pandas as pd
 import requests
 import time
+
+
+# -----크롤링 관련
+from bs4 import BeautifulSoup
+
+# selenium
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
+from webdriver_manager.chrome import ChromeDriverManager
+import undetected_chromedriver as uc
+
 
 class weekend_boxoffice:
     """
@@ -212,3 +229,4 @@ def convert_to_hundred_million(value):
         소수점 이하 3번째 자리에서 반올림되며 이하 2자리까지 표현됩니다.
         """
         return round(value / 1e8, 2)
+
